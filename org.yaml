@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: elcorteingles-group
+  description: The acme-corp organization
+  links:
+    - url: http://www.acme.com/
+      title: Website
+    - url: https://meta.wikimedia.org/wiki/
+      title: Intranet
+spec:
+  type: organization
+  profile:
+    displayName: ACME Corp
+    email: info@example.com
+    picture: https://avatars.dicebear.com/api/identicon/info@example.com.svg?background=%23fff&margin=25
+  children: [infrastructure]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: angelmorenomde
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: angel.morenoperez@elcorteingles.es
+    picture: https://avatars.githubusercontent.com/u/11455049?v=4
+  memberOf: [elcorteingles-group]
